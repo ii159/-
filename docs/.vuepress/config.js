@@ -3,6 +3,7 @@ import {hopeTheme} from "vuepress-theme-hope";
 import {webpackBundler} from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
+    base: '/blog/',
     lang: 'zh-CN',
 
     title: '橘子的教程网',
