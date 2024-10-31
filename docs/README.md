@@ -1,10 +1,11 @@
 ---
 home: true
-title: Home
-heroImage: /assets/橘子.jpg
+title:
+heroImage: /assets/a2.jpg
+heroText: 橘子文档
 actions:
-  - text: Get Started
-    link: /getting-started.html
+  - text: 开始使用
+    link: /home.md
     type: primary
 
   - text: Introduction

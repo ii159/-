@@ -2,21 +2,30 @@ import {defineUserConfig} from 'vuepress/cli'
 import {hopeTheme} from "vuepress-theme-hope";
 import {webpackBundler} from '@vuepress/bundler-webpack'
 
+import { getDirname, path } from 'vuepress/utils'
+const __dirname = getDirname(import.meta.url)
+const pluginOrTheme = {
+    clientConfigFile: path.resolve(__dirname, './client.js'),
+}
+
 export default defineUserConfig({
     base: '/blog/',
     lang: 'zh-CN',
 
-    title: '橘子的教程网',
-
-    description: 'My first VuePress Site',
+    title: '橘子文档',
 
     theme: hopeTheme({
-        logo: '/assets/橘子.jpg',
+
+        logo: '/assets/a2.jpg',
         colorModeSwitch: true,
         iconAssets: "iconify",
-        repo: "vuepress-theme-hope/vuepress-theme-hope",
+        repo: "https://github.com/ii159/blog",
         repoLabel: "GitHub",
         repoDisplay: true,
+        author: {
+            name: 'linxi',
+        },
+        pageInfo: ["Author", "Category", "Tag", "Original", "Word", "ReadingTime"],
         navbar: [// NavbarLink
             {
                 text: '首页',
@@ -25,13 +34,18 @@ export default defineUserConfig({
             },
             // NavbarGroup
             {
-                text: 'Group',
-                icon: '',
+                text: '插件使用',
+                icon: 'mingcute:plugin-2-fill',
                 prefix: '/group/',
                 children: ['foo.md', 'bar.md'],
             },
             // 字符串 - 页面文件路径
-            '/bar/README.md',
+            {
+                text: '开服教程',
+                icon: 'prime:book',
+                prefix: '/group/',
+                children: ['foo.md', 'bar.md'],
+            },
         ],
         plugins: {
             search: {
