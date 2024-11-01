@@ -1,7 +1,7 @@
 import {defineUserConfig} from 'vuepress/cli'
 import {hopeTheme} from "vuepress-theme-hope";
 import {webpackBundler} from '@vuepress/bundler-webpack'
-
+import sidebar from './sidebar.js'
 import { getDirname, path } from 'vuepress/utils'
 const __dirname = getDirname(import.meta.url)
 const pluginOrTheme = {
@@ -17,15 +17,20 @@ export default defineUserConfig({
     theme: hopeTheme({
 
         logo: '/assets/a2.jpg',
+        favicon: '/assets/a2.jpg',
         colorModeSwitch: true,
         iconAssets: "iconify",
         repo: "https://github.com/ii159/blog",
         repoLabel: "GitHub",
         repoDisplay: true,
+        breadcrumb: false,
+
         author: {
             name: 'linxi',
         },
         pageInfo: ["Author", "Category", "Tag", "Original", "Word", "ReadingTime"],
+
+
         navbar: [// NavbarLink
             {
                 text: '首页',
@@ -47,6 +52,8 @@ export default defineUserConfig({
                 children: ['foo.md', 'bar.md'],
             },
         ],
+
+        sidebar,
         plugins: {
             search: {
                 isSearchable: (page) => page.path !== "/",
