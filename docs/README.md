@@ -9,7 +9,7 @@ actions:
     link: /home.md
     type: primary
   - text: 新手开服
-    link: /open-server/n1.md
+    link: /open-server/speed.md
     type: default 
 features:
   - title: 广告位招租

@@ -8,7 +8,7 @@ export default sidebar({
             icon: "ic:round-menu-book",
             collapsible: true,
             prefix: "open-server/",
-            children: ["speed","n1","n2", "n3", "n4", "nx"],
+            children: ["speed","n1","n2", "n3", "common-command.md","n4"],
         },
         {
             text: "中级-插件使用",
