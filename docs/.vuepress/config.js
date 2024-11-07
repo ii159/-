@@ -24,6 +24,7 @@ export default defineUserConfig({
         repoLabel: "GitHub",
         repoDisplay: true,
         breadcrumb: false,
+        titleIcon: true,
 
         author: {
             name: 'linxi',
